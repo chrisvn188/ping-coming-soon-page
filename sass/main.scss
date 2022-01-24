@@ -119,6 +119,11 @@ body{
     font: inherit;
     font-size: .85rem;
 
+    @media (min-width:1140px) {
+      padding: 1em 2em;
+      font-size: 1rem;
+    }
+
     &:focus{
       outline: 1px solid $color-blue;
     }
@@ -127,9 +132,8 @@ body{
       color: $color-pale-blue;
     }
 
-    @media (min-width:1140px) {
-      padding: 1em 2em;
-      font-size: 1rem;
+    &.has-error{
+      outline: 1px solid $color-light-red;
     }
   }
 
@@ -138,17 +142,22 @@ body{
     margin-top: 5px;
     font-style: italic;
     color: $color-light-red;
-    // visibility: hidden;
+    visibility: hidden;
+    height: 0;
 
     @media (min-width:1140px) {
       text-align: left;
       padding-left: 2.5em;
       font-size: .85rem;
+
+    }
+
+    &.active{
+      visibility: visible;
+      height: auto;
     }
   }
 }
-
-
 
 .visually-hidden{
   width: 1px;
@@ -172,6 +181,7 @@ body{
   text-transform: capitalize;
   border-radius: 2em;
   box-shadow: 0 4px 10px 0 rgba($color-very-dark-blue, $alpha: .3);
+  cursor: pointer;
 
   @media (min-width:1140px) {
     align-self: flex-start;
@@ -222,6 +232,9 @@ body{
   &__text{
     font-size: .7rem;
     color: $color-gray;
+    @media (min-width:1140px) {
+      font-size: .85rem;
+    }
   }
 }
 

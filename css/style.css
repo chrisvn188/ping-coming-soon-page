@@ -107,23 +107,28 @@ body {
   font: inherit;
   font-size: 0.85rem;
 }
-.form__input:focus {
-  outline: 1px solid #4f7df3;
-}
-.form__input::placeholder {
-  color: #c2d3ff;
-}
 @media (min-width: 1140px) {
   .form__input {
     padding: 1em 2em;
     font-size: 1rem;
   }
 }
+.form__input:focus {
+  outline: 1px solid #4f7df3;
+}
+.form__input::placeholder {
+  color: #c2d3ff;
+}
+.form__input.has-error {
+  outline: 1px solid #ff5263;
+}
 .form__error-message {
   font-size: 0.7rem;
   margin-top: 5px;
   font-style: italic;
   color: #ff5263;
+  visibility: hidden;
+  height: 0;
 }
 @media (min-width: 1140px) {
   .form__error-message {
@@ -131,6 +136,10 @@ body {
     padding-left: 2.5em;
     font-size: 0.85rem;
   }
+}
+.form__error-message.active {
+  visibility: visible;
+  height: auto;
 }
 
 .visually-hidden {
@@ -153,6 +162,7 @@ body {
   text-transform: capitalize;
   border-radius: 2em;
   box-shadow: 0 4px 10px 0 rgba(21, 31, 41, 0.3);
+  cursor: pointer;
 }
 @media (min-width: 1140px) {
   .btn {
@@ -202,6 +212,11 @@ body {
 .footer__text {
   font-size: 0.7rem;
   color: #969696;
+}
+@media (min-width: 1140px) {
+  .footer__text {
+    font-size: 0.85rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
