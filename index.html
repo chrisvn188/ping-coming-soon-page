@@ -2,33 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c244e0dc81.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="container">
+    <!-- ....header.... -->
+    <header class="header">
+      <img src="images/logo.svg" alt="site logo" class="header__logo">
+    </header>
+    <!-- ..../header.... -->
 
-  We are launching soon!
+    <!-- ....main.... -->
+    <main class="main">
+      <!-- ....heading.... -->
+      <h1 class="main__heading">
+        <span class="main__heading--light">We are launching</span>
+        <span class="main__heading--bold"> soon!</span>
+      </h1>
+      <!-- ..../heading.... -->
 
-  Subscribe and get notified
+      <!-- ....subheading.... -->
+      <p class="main__subheading">Subscribe and get notified</p>
+      <!-- ..../subheading.... -->
 
-  Notify Me
+      <!-- ....form.... -->
+      <form action="" class="form" id="form" novalidate>
+        <div class="form-group">
+          <label for="email" class="visually-hidden">Email</label>
+          <div class="input-container">
+            <input type="email" id="emain" name="email" required placeholder="Your email address" class="form__input">
+            <p class="form__error-message">Please provide a valid email address!</p>
+          </div>
+          <button class="btn btn--submit" type="submit">notify me</button>
+        </div>
+      </form>
+      <!-- ..../form.... -->
 
-  &copy; Copyright Ping. All rights reserved.
+      <!-- ....dashboard image.... -->
+      <img src="images/illustration-dashboard.png" alt="dashboard illustration" class="dashboard-img">
+      <!-- ..../dashboard image.... -->
+    </main>
+    <!-- ..../main.... -->
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+    <!-- ....footer.... -->
+    <footer class="footer">
+      <div class="footer__social-links">
+        <a href="#" class="footer__link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="footer__link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="footer__link"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="footer__text">&copy; Copyright Ping. All rights reserved</p>
+    </footer>
+    <!-- ..../footer.... -->
+  </div>
 </body>
 </html>
