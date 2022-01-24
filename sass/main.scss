@@ -182,11 +182,16 @@ body{
   border-radius: 2em;
   box-shadow: 0 4px 10px 0 rgba($color-very-dark-blue, $alpha: .3);
   cursor: pointer;
+  transition: all .3s;
 
   @media (min-width:1140px) {
     align-self: flex-start;
     padding: 1em 4em;
     font-size: 1rem;
+  }
+
+  &:hover{
+    transform: translateY(-3px);
   }
   
 }

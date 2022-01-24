@@ -163,6 +163,7 @@ body {
   border-radius: 2em;
   box-shadow: 0 4px 10px 0 rgba(21, 31, 41, 0.3);
   cursor: pointer;
+  transition: all 0.3s;
 }
 @media (min-width: 1140px) {
   .btn {
@@ -170,6 +171,9 @@ body {
     padding: 1em 4em;
     font-size: 1rem;
   }
+}
+.btn:hover {
+  transform: translateY(-3px);
 }
 
 .btn--submit {
